@@ -4,10 +4,11 @@ import pygame                   # required to play sounds
 import os
 import os.path
 
-logfile = open("log.txt", "a")
 logging = False
+if logging:
+    logfile = open("log.txt", "a")
 def log(entry):
-    if logging == True:
+    if logging:
         logfile.write(entry + "\n")
         logfile.flush()
 
