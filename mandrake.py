@@ -4,6 +4,9 @@ import pygame                   # required to play sounds
 import os
 import os.path
 
+# The directory for mandrake to take sounds from
+directory = '/home/josh/sounds'
+
 logging = False
 if logging:
     logfile = open("log.txt", "a")
@@ -35,7 +38,6 @@ class SText(urwid.Text):
 fuzzy = FuzzyMatcher()
 #use a small buffer size to decrease latency
 pygame.mixer.init(frequency=22050, size=-16, channels=2, buffer=512)
-directory = '/home/josh/sounds'
 searchstring = ''
 
 list_of_files = os.listdir(directory)
